@@ -83,9 +83,8 @@ function construct (el: { redraw: { (): void; (): void; }; getElementById: (arg0
   mainEl.x = mainEl.y = 0;
   // PRIVATE FUNCTIONS
   // Because the widget is a closure, functions declared here aren't accessible to code outside the widget.
-  el.redraw = () => {
-    //@ts-ignore
-    const e: TextElement;
+  el.redraw = () => { 
+   
     el.getElementsByClassName("myText").forEach(e => {
       e.text = textEl.text ?? "";
       e.textAnchor = textEl.textAnchor === undefined ? "start" : textEl.textAnchor; // preset in widget css now?

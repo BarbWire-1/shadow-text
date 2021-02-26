@@ -38,9 +38,9 @@ let test: ShadowTextWidget = stepsLabel;
 // (the 3 layers to add fill are 'highlight', 'shadow' and 'main')
 // instead you can manipulate the fill of the layers like this:
 
-//test.shadowFill = "blue";
-//test.highlightFill = "yellow";
-//test.mainFill = "limegreen"
+test.shadowFill = "blue";
+test.highlightFill = "yellow";
+test.mainFill = "limegreen"
 
 
 

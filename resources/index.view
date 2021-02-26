@@ -19,6 +19,7 @@
 
     <use id="countDown" href="#shadowText" x="50%" y="50%+30" font-family="Barlow-Bold" font-size="70" opacity="1">
         <set href="text" attributeName="letter-spacing" to="2"/>
+        <set href="text" attributeName="text-anchor" to="middle"/>
     </use>
 
 </svg>

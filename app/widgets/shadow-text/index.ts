@@ -77,7 +77,7 @@ function construct (el: { redraw: { (): void; (): void; }; getElementById: (arg0
   const textEl = el.getElementById('text');
   const highlightEl = el.getElementById('highlight');
   const shadowEl = el.getElementById('shadow');
-  const mainEl = el.getElementById('main') as GraphicsElement;
+  const mainEl = el.getElementById('main');
 
 
   mainEl.x = mainEl.y = 0;

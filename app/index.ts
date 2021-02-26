@@ -28,9 +28,9 @@ let test: ShadowTextWidget = stepsLabel;
 //test.x = 200;
 //test.y = 200;
 //test.textAnchor = "middle";
-test.letterSpacing = 3;
+//test.letterSpacing = 3;
 //test.style.opacity = 0.7;
-test.style.fontFamily = "Tungsten-Medium";
+//test.style.fontFamily = "Tungsten-Medium";
 //test.style.fontSize = 25;
 //test.style.display = "none";
 
@@ -38,9 +38,9 @@ test.style.fontFamily = "Tungsten-Medium";
 // (the 3 layers to add fill are 'highlight', 'shadow' and 'main')
 // instead you can manipulate the fill of the layers like this:
 
-test.shadowFill = "blue";
-test.highlightFill = "yellow";
-test.mainFill = "limegreen"
+//test.shadowFill = "blue";
+//test.highlightFill = "yellow";
+//test.mainFill = "limegreen"
 
 
 
@@ -49,9 +49,11 @@ test.mainFill = "limegreen"
 //  (e as TextElement).style.fill = "yellow"
   
 //});
+/*
 console.log(JSON.stringify(test.children))
 console.log(JSON.stringify(document.getElementsByClassName("highlight")));
 console.log(JSON.stringify(document.getElementsByTypeName("shadowText")));
+*/
 //(test.getElementById("main") as ShadowTextWidget).style.fill = "red" // working: need document in widget index to reach "main" as child?
 
 //test.main.style.fill = "white" //not working

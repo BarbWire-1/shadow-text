@@ -2,7 +2,7 @@
 export interface ShadowTextWidget extends TextElement {
   //text: string;
   //textAnchor: "start" | "middle" | "end";
-  //letterSpacing: number;
+  letterSpacing: number;
   shadowFill: string;
   highlightFill: string;
   mainFill: string;
@@ -13,7 +13,7 @@ export interface ShadowTextWidget extends TextElement {
 }
 
 
-function construct (el: { redraw: { (): void; (): void; }; getElementById: (arg0: string) => GraphicsElement; getElementsByClassName: (arg0: string) => any[]; }) {
+function construct (el: { redraw: { (): void; (): void; }; getElementById: (arg0: string) => TextElement; getElementsByClassName: (arg0: string) => any[]; }) {
  
   Object.defineProperty(el, 'text', {
     set: function (newValue) {
@@ -24,14 +24,14 @@ function construct (el: { redraw: { (): void; (): void; }; getElementById: (arg0
 
   Object.defineProperty(el, 'textAnchor', {
     set: function (newValue) {
-      textEl.textAnchor = newValue;
+      (textEl as TextElement).textAnchor = newValue;
       el.redraw();
     }
   });
 
   Object.defineProperty(el, 'letterSpacing', {
     set: function (newValue) {
-      textEl.letterSpacing = newValue;
+      (textEl as TextElement).letterSpacing = newValue;
       el.redraw();
     }
   });
@@ -81,6 +81,10 @@ function construct (el: { redraw: { (): void; (): void; }; getElementById: (arg0
 
 
   mainEl.x = mainEl.y = 0;
+  /*
+  shadowEl.x = shadowEl.y = 2;
+  highlightEl.x = highlightEl.y = -1;
+  */
   // PRIVATE FUNCTIONS
   // Because the widget is a closure, functions declared here aren't accessible to code outside the widget.
   el.redraw = () => { 

@@ -15,13 +15,13 @@ text.textAnchor = "middle";
 text.letterSpacing = 0;
 
 // now applied per class
-document.getElementsByClassName("myText").forEach(e => {
-  (e as TextElement).text = text.text;
+document.getElementsByClassName("myText").forEach((e: TextElement) => {
+  e.text = text.text;
   //props
-  (e as TextElement).style.fontFamily = text.style.fontFamily;
-  (e as TextElement).style.fontSize = text.style.fontSize;
-  (e as TextElement).textAnchor = text.textAnchor;
-  (e as TextElement).letterSpacing = text.letterSpacing;
+  e.style.fontFamily = text.style.fontFamily;
+  e.style.fontSize = text.style.fontSize;
+  e.textAnchor = text.textAnchor;
+  e.letterSpacing = text.letterSpacing;
 });
 
 
